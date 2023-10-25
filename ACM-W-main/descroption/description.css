@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.container1{
+  position: relative;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* background:linear-gradient(to right bottom,#011021 50%,#4adef5); */
+    background:#f0f0f0df ;
+}
+ 
+.navbar li{
+    list-style: none;
+  
+  }
+  
+  
+  .navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  
+  .navbar a:hover{
+    color:rgb(12, 0, 242);
+    text-shadow: #00ff22;
+    font-weight: 500;
+  }
+  
+  header{
+    position:relative;
+    z-index: 2;
+    padding: 0 2rem;
+    margin-top: 1px;
+    background:white;
+    backdrop-filter: blur(15px);
+    border-radius:1px;
+    width: 100%;
+    transition:ease;
+  
+  }
+  
+  .navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  
+  
+  .navbar .logo img{
+    height: 40px;
+    width: 40px;
+  }
+  
+  .navbar .links{
+    display: flex;
+    gap: 2rem;
+  }
+  
+  
+  .navbar .toggle_btn{
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  
+  }
+  
+  
+  /* 
+  dropdownmenu */
+  .dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 350px;
+    height: 0;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius:4px;
+    overflow: hidden;
+    display: none;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 10px;
+  }
+  
+  .dropdown_menu.open{
+    height: 240px;
+    padding: auto;
+    margin: auto;
+  }
+  
+  
+  .empty{
+    display: none;
+    
+  }
+  
+  
+  
+  .dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  /* responsive */
+  @media(max-width:992px)
+  {
+    .navbar .links{
+        display: none;
+    }
+  
+    .navbar .toggle_btn{
+        display: block;
+    }
+  
+    .dropdown_menu{
+        display: block;
+        
+    }
+  
+    .event2{
+      display: none;
+    }
+    
+    
+  }
+  
+  @media(max-width:576px){
+    .dropdown_menu{
+        left: 2.1rem;
+        width: unset;
+        background:white;
+    }
+  
+    .event2{
+      display: none;
+  
+    }
+  
+    .empty{
+      height: 10rem;
+      background: transparent;
+      display: block;
+      
+    }    
+  }
+  
+
+/* space for the css of the main body */
+
+.mainbody{
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background: transparent;
+  color: #000;
+  padding: 100px  0 30px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.mainrow{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.maincol{
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.maincol:nth-child(1){
+  flex-basis: 45%;
+}
+.maincol p{
+  gap: 2px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  margin-top: 3%;
+}
+
+.maincol:nth-child(1) .img_con{
+margin-top: 20px;
+}
+
+.maincol:nth-child(1) img{
+  width: 130px;
+  height:auto ;
+  border-radius:20px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;
+  padding: 20px;
+  margin: 15px;
+}
+
+.maincol:nth-child(1) img:hover{
+  box-shadow: rgba(43, 251, 255, 0.35) 0px 5px 10px;
+  
+}
+.maincol img{
+  margin-top: 0%;
+  width: 600px;
+  height: 600px;
+  height:auto ;
+  border-radius: 10px;
+
+}
+
+
+
+.maincol h3{
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  gap: 2px;
+  font-size: xx-large;
+  line-height: 30px;
+  color: #e30909;
+}
+
+
+/* code for the button */
+
+
+.Button3{
+    background-color:transparent;
+    color: rgb(84, 84, 84);
+    font-size: 15px;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #808080;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+    .Button3:hover{
+        background: 0 0;
+        color: #ff4742;
+    }
+
+/* container2  css is here */
+.container2{
+  position: relative;
+    width: 100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg,#f0f0f0df,#d5fefd );   
+}
+
+
+/* container 3 is here */
+
+
+.container3
+{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg,#f0f0f0df,#d5fefd );    
+}
+.container4
+{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg,#f0f0f0df,#d5fefd );    
+}
+
+
+/* footer section css start here*/
+
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: #151517;
+    color: #fff;
+    padding: 100px  0 30px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .footrow{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .footcol{
+    flex-basis: 25%;
+    padding: 10px;
+  }
+  
+  .footcol:nth-child(3),.footcol:nth-child(2){
+    flex-basis: 15%;
+  }
+  
+  
+  .footcol h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: large;
+  }
+  .footcol p{
+    margin: 6px;
+  }
+  .footlogo{
+    
+    height: 120px;
+    width: 120px;
+    margin-bottom: 30px;
+  }
+  
+  
+  .footemail-id{
+    width: fit-content;
+    border-bottom: solid 1px #ccc;
+    margin: 20px 0;
+  }
+  
+  .footcol ul li{
+    list-style: none;
+    margin: 12px;
+  }
+  
+  .footcol ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: medium;
+  }
+  /* .footcol ul li a:hover{
+    color: #03a9f4;
+    font-size:large;
+    
+  } */
+  .social-icons  .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+  
+  }
+  
+ 
+  
+  footer hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+  }
+  .footcopyright{
+    text-align: center;
+  
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color:aqua;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:aqua;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    margin-top: 2px;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+  .hover-underline {
+    display: inline-block;
+    position: relative;
+    color:#000;
+  }
+  
+  .hover-underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    margin-top: 2px;
+  }
+  
+  .hover-underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .underline{
+    width: 100%;
+    height: 5px;
+    background:#767676 ;
+    border-radius: 3px;
+    position: absolute;
+    top:25px;
+    left: 0;
+    overflow: hidden;
+  }
+  
+  .underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: footmoving 2s linear infinite;
+  }
+  
+  
+  @keyframes footmoving{
+    0%{
+        left: -20px;
+    }
+  
+    100%{
+        left: 100%;
+    }
+  
+  }
+  
+  
+  @media(max-width:700px){
+  footer{
+    bottom: unset;
+  }
+  
+  
+  .footcol{
+    flex-basis: 100%;
+  
+  }
+  
+  .footcol:nth-child(3),.footcol:nth-child(2){
+    flex-basis: 100%;
+  }
+
+  .mainbody{
+    bottom: unset;
+  }
+  
+  .mainrow{
+    flex-direction: column-reverse;
+  }
+  
+  .maincol{
+    flex-basis: 100%;
+  
+  }
+  
+  .maincol:nth-child(3),.maincol:nth-child(2){
+    flex-basis: 100%;
+  }
+
+
+
+  
+  }
+  
+  /* footer css ends here */
+/* footer section css eds here*/
+  
+  

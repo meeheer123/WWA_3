@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    
+}
+
+.contactcontainer{
+    width: 58%;
+    display: grid;
+    grid-template-columns:30% 58%;
+    gap: 12%;
+}
+
+.contact__options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact__option{
+    background: #808080;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition:ease;
+}
+.contact__option:hover{
+    background: transparent;
+    border-color: black;
+}
+
+.contact__option-icon{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.contact__option a{
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+/* --------------styling for form ------------------------------------------*/
+
+form{
+    display:flex ;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input,textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid #6a6a6a;
+    resize: none;
+    color: white;
+}
+
+
+/*______________________________ media query for tablet ____________________________________________*/
+@media screen and (max-width:1024px){
+  .contact__container{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+/*______________________________ media query for tablet ____________________________________________*/
+@media screen and (max-width:600px){
+    .contact__container{
+        grid-template-columns: 1fr;
+      }
+}
+#contact a{
+    background-color:transparent;
+        color: rgb(84, 84, 84);
+        font-size: 15px;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid wheat;
+        display: inline-block;
+        border-radius: 5px;
+        margin-top: 10px;
+
+}
+
+#contact h2{
+    text-align: center;
+    font-family: poppins;
+    margin: 5px;
+}
+.container__inquiry{
+    padding: 10px;
+}
+.container__inquiry header{
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}

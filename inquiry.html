@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Manager</title>
+
+    <link rel="stylesheet" href="inquiry.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+</head>
+<body>
+
+
+
+    
+    <div class="container__inquiry">
+        <header>
+            <div class="navbar">
+                <div class="logo"><img src="image/logo.png" alt="logo"></div>
+                <ul class="links">
+                    <li> <a href="/index.html">Home</a> </li>
+                    <li><a href="/inquiry.html">Inquiry</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="ACM-W-main\display.html">Offers</a></li>
+                    <li><a href="/description.html">Description</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+        
+                </div>
+           
+        
+        
+            <div class="dropdown_menu">
+                <li> <a href="/index.html">Home</a> </li>
+                <li><a href="/inquiry.html">Inquiry</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="ACM-W-main\display.html">Offers</a></li>
+                <li><a href="/description.html">Description</a></li>
+        </div>
+        </header>
+    <section id='contact'>
+        <h2>Contatct Us</h2>
+        <div class="contact__container">
+            <div class="contact__options">
+            <article class='contact__option'>
+              <h4>Email</h4>
+              <h5>avirajkale2004@gmail.com</h5>
+              <a href="mailto:avirajkale2004@gmail.com" target='_blank' rel="noreferrer">Send a Message</a>
+            </article>
+            <article class='contact__option'>
+              <h4>Messenger</h4>
+              <h5>avirajkale</h5>
+              <a href="https://m.me/ernest.achiever" target='_blank' rel="noreferrer" >Send a Message</a>
+            </article>
+            <article class='contact__option'>
+              <h4>WhatsApp</h4>
+              <h5>92_XX</h5>
+              <a href="https://api.whatsapp.com/send?phone=9284385845" target='_blank' rel="noreferrer">Send a Message</a>
+            </article>
+          </div>
+
+
+          <br><br>
+          <h2>Contatct Us</h2>
+          <form ref={form} onSubmit={sendEmail}>
+            <input type="text" name='name' placeholder='Your Full Name' required />
+            <input type="email" name='email' placeholder='Your Email' required />
+            <textarea name="message" rows="7"  placeholder='Your Message' required ></textarea>
+            <!-- <button type='submit' class='btn btn-primary'>Send Message</button> -->
+            <a href="/">Send Message </a>
+          </form>
+       
+  
+        </div>
+      </section>
+    </div>
+    <div class="container3">
+
+        
+        <footer>
+            <div class="footrow">
+                <div class="footcol">
+                    <h3>Instructions<div class="underline"><span></span></div></h3>
+                    <p> <b>1.Respect Privacy: Always get consent and protect personal information.</b> </p>
+                    <p><b>2.Ask Preferences: Tailor app use to their needs and wishes.</b> </p>
+                    <p><b>3.Clear Communication: Use clear and respectful language.</b> </p>
+                    <p><b>4.Assist, Don't Take Over: Encourage independence, use the app as support.</b> </p>
+    
+                </div>
+                <div class="footcol">
+
+                    <h3>Links<div><span></span></div></h3>  
+                <!-- class="underline" -->
+                    <ul>
+                        <li> <a class="hover-underline-animation"  href="index.html">Home</a> </li>
+                        <li><a  class="hover-underline-animation" href="inqury.html">Inquiry</a></li>
+                        <li><a  class="hover-underline-animation" href="about.html">About</a></li>
+                        <li><a  class="hover-underline-animation" href="offer.html">Offers</a></li>
+                        <li><a  class="hover-underline-animation" href="offer.html">Description</a></li>
+                    </ul>
+                 
+                </div>
+                <div class="footcol">
+                    <h3>Links<div><span></span></div></h3>  
+                <!-- class="underline" -->
+                    <ul>
+                        <li> <a class="hover-underline-animation"  href="index.html">Home</a> </li>
+                        <li><a  class="hover-underline-animation" href="inqury.html">Inquiry</a></li>
+                        <li><a  class="hover-underline-animation" href="about.html">About</a></li>
+                        <li><a  class="hover-underline-animation" href="offer.html">Offers</a></li>
+                        <li><a  class="hover-underline-animation" href="offer.html">Description</a></li>
+                    </ul>
+                </div>
+                <div class="footcol">
+                    <h3>Contact Us<div class="underline"><span></span></div></h3>
+                    <p>Mr. Person 1</p>
+                    <p>Mr. Person 2</p>
+                    <p>Mr. person 3</p>
+                    <h3 style="margin-top: 10px;">Social-links</h3>
+                    <div class="social-icons">
+                  <a href="#"> <i class="fa-brands fa-youtube fab"></i></a> 
+                   <a href="#"><i class="fa-brands fa-instagram fab"></i></a> 
+                   <a href="#"><i class="fa-brands fa-instagram fab"></i></a> 
+                   <a href="#"><i class="fa-brands fa-instagram fab"></i></a> 
+                </div>
+            </div>
+            </div>
+            <hr>
+            <p class="footcopyright">Panda,Harshad & Avi ||All Rights Reserved </p>
+            
+            </footer>
+    </div>
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+    toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+    
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        :'fa-solid fa-bars'
+    }
+    </script>
+    
+</body>
+</html>
